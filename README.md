@@ -1,9 +1,9 @@
 # Laporan Praktikum 3 – CSS Dasar
 
-**Nama** : Yusuf Hamdani
-**NIM** : 312510049
-**Mata Kuliah** : Pemrograman Web
-**Program Studi** : Teknik Informatika, Universitas Pelita Bangsa
+Nama : Yusuf Hamdani
+NIM : 312510049
+Mata Kuliah : Pemrograman Web
+Program Studi : Teknik Informatika, Universitas Pelita Bangsa
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## Langkah 1 – Membuat Dokumen HTML
 
-Pada langkah pertama, saya membuat file `index.html` sebagai halaman praktikum. Struktur halamannya terdiri dari tiga bagian:
+Pada langkah pertama, saya membuat file `index.html` sebagai halaman praktikum. Atribut bahasa pada tag `<html>` saya set menjadi `lang="id"` karena isi halaman berbahasa Indonesia. Struktur halamannya terdiri dari tiga bagian:
 
 - `<header>` berisi judul halaman,
 - `<nav>` berisi tiga link menu (CSS Dasar, CSS Eksternal, HTML Dasar),
@@ -24,7 +24,7 @@ Pada langkah pertama, saya membuat file `index.html` sebagai halaman praktikum. 
 
 Karena belum ada CSS sama sekali, halaman masih tampil dengan gaya bawaan browser: teks hitam, link biru bergaris bawah, dan semua elemen rata kiri.
 
-![Langkah 1](screenshots/ss1.png)
+![Langkah 1](Screenshot/ss1.png)
 
 ---
 
@@ -43,7 +43,7 @@ Selector `h1 i` disebut *descendant selector*, yaitu selector yang hanya berlaku
 
 Setelah file disimpan dan browser di-refresh, judul menjadi biru dan rata tengah, serta muncul garis tipis di bawah header.
 
-![Langkah 2](screenshots/ss2.png)
+![Langkah 2](Screenshot/ss2.png)
 
 ---
 
@@ -59,7 +59,7 @@ Dengan kode tersebut, paragraf menjadi rata tengah dan berwarna abu-biru muda. P
 
 Warna teks terlihat pucat dan sulit dibaca pada latar putih. Hal ini memang disengaja karena warna tersebut dirancang untuk latar biru yang baru ditambahkan pada Langkah 5.
 
-![Langkah 3](screenshots/ss3.png)
+![Langkah 3](Screenshot/ss3.png)
 
 ---
 
@@ -70,13 +70,13 @@ Pada langkah ini, saya membuat file baru bernama `style_eksternal.css` di folder
 ```css
 nav {
     background: #20A759;
-    color: #fff;
+    color:#fff;
     padding: 10px;
 }
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding:10px 20px;
 }
 nav .active,
 nav a:hover {
@@ -98,7 +98,7 @@ Agar file CSS terbaca, saya menghubungkannya dengan tag `<link>` di dalam `<head
 
 Atribut `rel="stylesheet"` menunjukkan jenis file yang dihubungkan, sedangkan `href` berisi lokasi file CSS. Setelah browser di-refresh, menu berubah menjadi bar hijau dengan tulisan putih.
 
-![Langkah 4](screenshots/ss4.png)
+![Langkah 4](Screenshot/ss4.png)
 
 ---
 
@@ -106,7 +106,7 @@ Atribut `rel="stylesheet"` menunjukkan jenis file yang dihubungkan, sedangkan `h
 
 Pada `style_eksternal.css`, saya menambahkan dua jenis selector.
 
-**ID selector** (diawali tanda `#`) untuk elemen yang bersifat unik:
+ID selector (diawali tanda `#`) untuk elemen yang bersifat unik:
 
 ```css
 #intro {
@@ -124,7 +124,7 @@ Pada `style_eksternal.css`, saya menambahkan dua jenis selector.
 
 `#intro` mengubah `div` menjadi kotak biru berbingkai hijau. Sementara `#intro h1` hanya mengenai judul "Hello World" yang berada di dalam kotak tersebut, sehingga warnanya putih dan rata kiri.
 
-**Class selector** (diawali tanda titik) untuk gaya yang bisa dipakai berulang:
+Class selector (diawali tanda titik) untuk gaya yang bisa dipakai berulang:
 
 ```css
 .button {
@@ -142,7 +142,7 @@ Pada `style_eksternal.css`, saya menambahkan dua jenis selector.
 
 Tombol memakai dua class sekaligus (`class="button btn-primary"`). Class `.button` mengatur bentuk dasar tombol, lalu `.btn-primary` menimpa warna latarnya dari abu-abu menjadi merah. Hasil akhirnya sama dengan Gambar 6 pada modul.
 
-![Langkah 5](screenshots/ss5.png)
+![Langkah 5](Screenshot/ss5.png)
 
 ---
 
@@ -150,7 +150,7 @@ Tombol memakai dua class sekaligus (`class="button btn-primary"`). Class `.butto
 
 ### 1. Eksperimen Properti CSS
 
-Pada `style_eksternal.css`, saya mencoba menambah beberapa properti:
+Pada praktikum ini, saya mencoba mengubah dan menambah properti pada kode CSS dengan mengacu pada CSS Cheat Sheet. Pada bagian akhir `style_eksternal.css`, saya menambahkan kode berikut:
 
 ```css
 .button {
@@ -162,15 +162,19 @@ Pada `style_eksternal.css`, saya mencoba menambah beberapa properti:
 }
 ```
 
-- `border-radius: 6px` membuat sudut tombol membulat.
-- `font-weight: bold` menebalkan tulisan pada tombol.
-- `.btn-primary:hover` membuat tombol berubah menjadi merah yang lebih gelap saat kursor diarahkan ke atasnya.
+Hasil dari eksperimen tersebut adalah sebagai berikut:
 
-Selain itu, saya menambahkan `class="active"` pada link "CSS Dasar" agar menu yang sedang dibuka tampil dengan warna hijau tua.
+- `border-radius: 6px` membuat sudut tombol "Informasi selengkapnya" menjadi membulat.
+- `font-weight: bold` menebalkan tulisan pada tombol.
+- `.btn-primary:hover` membuat tombol berubah menjadi merah yang lebih gelap (`#B01E32`) saat kursor diarahkan ke atasnya, dan kembali ke merah semula (`#E42A42`) saat kursor dipindahkan.
+
+Selain itu, saya menambahkan `class="active"` pada link "CSS Dasar" di dalam `<nav>`, sehingga aturan `nav .active` berlaku dan menu tersebut tampil dengan latar hijau tua `#0B6B3A`.
+
+(Screenshot/ss6.png)
 
 ### 2. Perbedaan `h1 {...}` dengan `#intro h1 {...}`
 
-Perbedaannya ada pada **cakupan** dan **tingkat prioritas** selector.
+Perbedaannya ada pada cakupan dan tingkat prioritas selector.
 
 | | `h1 {...}` | `#intro h1 {...}` |
 |---|---|---|
@@ -182,7 +186,7 @@ Pada praktikum ini ada dua `<h1>`. Aturan `h1` mengenai keduanya (biru tua dan r
 
 ### 3. Prioritas Internal, Eksternal, dan Inline
 
-Deklarasi yang ditampilkan browser adalah **inline CSS**, karena inline memiliki prioritas tertinggi. Untuk internal dan eksternal, tingkat prioritasnya sama, sehingga yang dipakai adalah yang **ditulis paling akhir** pada dokumen (prinsip *cascade*).
+Deklarasi yang ditampilkan browser adalah inline CSS, karena inline memiliki prioritas tertinggi. Untuk internal dan eksternal, tingkat prioritasnya sama, sehingga yang dipakai adalah yang ditulis paling akhir pada dokumen (prinsip *cascade*).
 
 Contoh pada elemen `<p>` yang sama:
 
@@ -198,11 +202,11 @@ p { color: green; }
 <p style="color: red;">Teks</p>
 ```
 
-Teks akan tampil **merah** karena inline mengalahkan yang lain. Jika atribut inline dihapus, hasilnya bergantung pada urutan penulisan: bila `<link>` ditulis sebelum `<style>`, teks menjadi **biru** (internal menang), tetapi bila `<link>` ditulis sesudah `<style>`, teks menjadi **hijau** (eksternal menang).
+Teks akan tampil merah karena inline mengalahkan yang lain. Jika atribut inline dihapus, hasilnya bergantung pada urutan penulisan: bila `<link>` ditulis sebelum `<style>`, teks menjadi biru (internal menang), tetapi bila `<link>` ditulis sesudah `<style>`, teks menjadi hijau (eksternal menang). Pada file `index.html` saya, `<link>` ditulis sebelum `<style>`, sehingga jika ada properti yang bertabrakan dengan specificity yang sama, aturan internal yang dipakai.
 
 ### 4. Prioritas ID dan Class pada Elemen yang Sama
 
-Deklarasi yang ditampilkan adalah milik **ID selector**. ID memiliki specificity (1,0,0), sedangkan class hanya (0,1,0), sehingga ID selalu lebih kuat tanpa memandang urutan penulisannya.
+Deklarasi yang ditampilkan adalah milik ID selector. ID memiliki specificity (1,0,0), sedangkan class hanya (0,1,0), sehingga ID selalu lebih kuat tanpa memandang urutan penulisannya.
 
 Contoh pada `<p id="paragraf-1" class="textparagraf">`:
 
@@ -211,8 +215,9 @@ Contoh pada `<p id="paragraf-1" class="textparagraf">`:
 .textparagraf { color: blue; }
 ```
 
-Teks akan tampil **merah**. Namun, property yang tidak bertabrakan tetap digabungkan. Misalnya, bila `.textparagraf` juga memiliki `font-size` yang tidak diatur oleh `#paragraf-1`, ukuran font dari class tetap dipakai.
+Teks akan tampil merah. Namun, property yang tidak bertabrakan tetap digabungkan. Misalnya, bila `.textparagraf` juga memiliki `font-size` yang tidak diatur oleh `#paragraf-1`, ukuran font dari class tetap dipakai.
 
+---
 
 ## Kesimpulan
 
